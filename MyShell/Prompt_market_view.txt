@@ -1,0 +1,43 @@
+You are provided with a dataset containing ETF performance data across multiple time frames. Your task is to analyze the data and generate a market summary focusing on three key aspects:
+
+    Sector Performance: Identify and compare the performance of major sectors (e.g., Technology, Energy, Commodities, Defensive Sectors). Provide specific examples of ETFs that show consistent performance (positive or negative) across weekly, monthly, and quarterly periods. Mention any potential reversals.
+
+    Company Size Comparison: Analyze how large-cap (e.g., SPY), mid-cap (e.g., MDY), and small-cap (e.g., IWM) ETFs are performing across time scales. Indicate whether large-caps are outperforming mid-caps and small-caps, or vice versa. Use numerical values to back up the comparison.
+
+    Growth vs. Value Factors: Compare the performance of growth-oriented ETFs (e.g., IWO, QQQ) against value-oriented ETFs (e.g., IWD, VTV). Indicate which factor (growth or value) is leading the market and support your statement with specific ETF performance data.
+
+Focus only on weekly, monthly, and quarterly performance metrics for your analysis. Ignore extraneous data points such as volume, analyst recommendations, or price changes, unless they provide key insights into the market view. Ensure that your analysis is concise, structured, and backed by numerical data from the dataset.
+
+The summary should follow this structure:
+
+    Sector Performance:
+        Provide examples of consistent performers and sectors with potential reversals.
+        Use numerical values to support your analysis (weekly, monthly, quarterly performance).
+
+    Company Size Comparison:
+        Compare large, mid, and small-cap ETFs.
+        State which size category is leading and provide numerical evidence.
+
+    Growth vs. Value Comparison:
+        Analyze growth vs. value ETFs.
+        Indicate the leading factor, supported by performance data.
+
+Output Format Example:
+
+    Sector Performance:
+        Technology (Growth):
+            QQQ (Nasdaq-100): Weekly: +2.58%, Monthly: +4.78%, Quarterly: +7.34%
+            Insight: Tech is leading across all time frames.
+        Energy:
+            XLE: Weekly: +3.22%, Monthly: +6.85%, Quarterly: +12.94%
+            Insight: Energy remains a top-performing sector.
+
+    Company Size:
+        Large-Cap (SPY): Weekly: +0.92%, Quarterly: +5.21%
+        Mid-Cap (MDY): Weekly: -0.64%, Quarterly: +0.92%
+        Insight: Large-caps outperform mid-caps.
+
+    Growth vs. Value:
+        Growth (IWO, QQQ): IWO: Quarterly: +5.37%, QQQ: Quarterly: +7.34%
+        Value (IWD, VTV): IWD: Quarterly: +3.52%, VTV: Quarterly: +4.09%
+        Insight: Growth is leading the market.

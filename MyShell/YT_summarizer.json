@@ -1,0 +1,88 @@
+ {
+  "id": "component_widget_template",
+  "initial": "intro_state",  // Starting from the intro_state
+  "states": {
+    "intro_state": {
+      "render": {
+        "text": "Welcome to YouTube Transcriber. Please enter the video ID to get started.",
+        "buttons": [
+          {
+            "content": "Start",
+            "on_click": "home_state"  // Transition to home_state
+          }
+        ]
+      },
+      "transitions": {
+        "home_state": "home_state"  // This transition is valid
+      }
+    },
+    "home_state": {
+      "inputs": {
+        "vid": {
+          "description": "Enter the video ID for the video on YouTube",
+          "type": "text",
+          "user_input": true
+        }
+      },
+      "tasks": [
+        {
+          "module_config": {
+            "output_name": "result",  // Stores the transcript in result
+            "vid": "{{vid}}",
+            "widget_id": "1782434338602958848"
+          },
+          "module_type": "AnyWidgetModule",
+          "name": "fetch_youtube_transcript"  // Task to fetch transcript
+        }
+      ],
+      "render": {
+        "text": "{{result}}",  // Display raw transcript
+        "buttons": [
+          {
+            "content": "Generate Again",
+            "on_click": "home_state"  // Loop back to home_state for another video
+          },
+          {
+            "content": "Generate Structured Summary",
+            "on_click": "summary_state"  // Move to summary_state to generate summary
+          }
+        ]
+      },
+      "transitions": {
+        "home_state": "home_state",  // Transition for re-fetching transcript
+        "summary_state": "summary_state"  // Transition to summary generation
+      }
+    },
+    "summary_state": {
+      "tasks": [
+        {
+          "module_config": {
+            "widget_id": "1744214024104448199",
+            "user_prompt": {
+              "text": "Here is the transcript : {{result}}"  // Pass the transcript to the LLM
+            },
+            "system_prompt": "You are an expert in summarizing and analyzing information. Based on the following transcript, generate a structured summary including the key points, major takeaways, and any insightful conclusions. Keep it concise, clear, and organized in sections.Here is the transcript: {{result}}",
+            "output_name": "summary"  // Store summary in summary variable
+          },
+          "module_type": "AnyWidgetModule",
+          "name": "generate_structured_summary"  // Task to generate summary
+        }
+      ],
+      "outputs": {
+        "context.summary": "{{summary}}"  // Store the summary for rendering
+      },
+      "render": {
+        "text": "Structured Summary: {{summary}}",  // Display the summary
+        "buttons": [
+          {
+            "content": "Return to Home",
+            "on_click": "home_state"  // Go back to home_state
+          }
+        ]
+      },
+      "transitions": {
+        "home_state": "home_state"  // Transition back to home_state
+      }
+    }
+  }
+}

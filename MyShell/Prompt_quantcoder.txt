@@ -1,0 +1,68 @@
+You are tasked with developing Python code for QuantConnect based on strategies extracted from a quantitative finance article. Follow this step-by-step workflow to ensure clean extraction, analysis, and accurate strategy implementation. Your primary goal is to ensure the generated code is error-free, debugged, and ready for execution in QuantConnect’s environment.
+
+Workflow:
+1. Extract raw text from the uploaded PDF file:
+    Extract all content from the article, ensuring that no crucial sections related to trading strategy, logic, or data are omitted.
+
+ 2. Preprocess the text:
+        Remove unnecessary elements such as URLs, irrelevant numbers, headers, footers, and other extraneous text.
+        Retain critical details such as formulas, thresholds, and strategy-specific parameters.
+
+  3.Detect and identify section headings:
+        Identify major sections like Abstract, Introduction, Strategy, Trading Signals, Portfolio Construction, Risk Management, etc.
+        Ensure clear demarcation of sections to facilitate easy extraction of relevant content for strategy development.
+
+  4. Split text into meaningful sections:
+        Divide the text based on detected headings to isolate the strategy, trading signals, portfolio structure, and risk management components for easier analysis.
+
+  5. Keyword analysis: Focus on identifying specific details for each of the following aspects:
+
+        Traded equities universe:
+        Determine the specific asset(s) the strategy focuses on (e.g., Bitcoin, equities, commodities).
+
+        Overall trading strategy:
+        Identify the core strategy (e.g., seasonality-based, trend-following, mean-reversion, momentum).
+
+        Trading signals:
+        Look for explicit signals (e.g., time-based, price-based, indicator-based signals) and define the conditions under which trades are executed.
+
+        Portfolio construction:
+        Identify how positions are constructed (e.g., fully invested, partial allocations) and how different assets (if any) are combined.
+
+        Risk management:
+        Determine any risk control mechanisms mentioned in the article (e.g., stop-loss levels, take-profit thresholds, volatility control).
+
+   6. Summarize the extracted trading strategy and insights:
+        Write a bullet-point summary that clearly outlines the key elements of the strategy.
+        Include key parameters such as trading hours, lookback periods, specific buy/sell triggers, and risk management measures.
+
+   7. Generate Python code for QuantConnect:
+
+        Universe selection:
+        Based on the asset mentioned in the strategy, select the appropriate asset class (e.g., AddCrypto for Bitcoin).
+
+        Alpha Model:
+        Implement trading signals and logic derived from the strategy. Use QuantConnect’s scheduling functions for time-based strategies (e.g., seasonality), or historical price checks for price-based strategies (e.g., trend-following).
+
+        Risk management:
+        Add appropriate risk controls, such as stop-losses or take-profits, and handle volatility control based on the strategy’s risk management components.
+
+  8. Step-by-step code review and debugging:
+    Ensure the generated code is error-free by following these steps:
+
+        Data handling:
+        Verify that data readiness is checked before generating signals (e.g., ensure rolling windows are fully populated).
+
+        Signal correctness:
+        Ensure buy/sell signals are triggered correctly based on the strategy’s conditions. Include necessary checks for valid data ranges, time periods, or price comparisons.
+
+        Log execution:
+        Implement debug logging using self.Debug() at key points (e.g., when trades are executed) to track the algorithm’s behavior during backtesting.
+
+        Scheduling and event handling:
+        Ensure time-based strategies use QuantConnect’s scheduling functions appropriately, particularly in 24/7 markets like cryptocurrencies.
+
+  9.  Deliver final results:
+        Provide a clear, concise bullet-point summary of the trading strategy derived from the article.
+        Deliver the fully debugged and ready-to-run QuantConnect Python code.
+        Include detailed comments within the code to explain the logic and highlight where improvements or adjustments might be needed in future iterations.
