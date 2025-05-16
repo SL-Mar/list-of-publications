@@ -140,7 +140,7 @@ et la Croatie**](https://scanr.enseignementsup-recherche.gouv.fr/publications/ha
 ---
 
 ## **Connect with Me**
-I am a shipmaster writing outside of a traditional academic setting. This undoubtedly presents challenges to my progress. However, my long-term goal remains: to fully automate research in quantitative finance. If you find the project interesting, feel free to explore my [GitHub](https://github.com/SL-Mar) or connect with me for collaboration opportunities.
+I am a shipmaster writing outside of a traditional academic setting. Explore my [GitHub](https://github.com/SL-Mar) or connect with me for collaboration opportunities.
 
 ---
 
