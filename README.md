@@ -3,6 +3,7 @@
 ### This repository contains a collection of Python code snippets and non-structured projects related to quant finance and AI. 
 ### Below is a selection of my articles covering **quantitative finance**, **algorithmic trading**, **AI applications**, **Python development**, and maritime law. 
 ### You can explore most of these articles on my Medium profile https://medium.com/@sl_mar.
+### Starting September 2025, all finance-related articles will be collected at [quantcoderfs.substack.com](https://quantcoderfs.substack.com/). Please note that some links below may be temporarily broken.
 
 ---
 
