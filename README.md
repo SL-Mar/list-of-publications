@@ -20,6 +20,12 @@ This repository contains a collection of Python code, Jupyter notebooks, and too
 - **MyShell/** - AI bot configurations and prompts (Trading Operator, Fast PDF, YT Summarizer, Market View)
 - **Youtube_Summarizer/** - Tools for summarizing YouTube video transcripts
 
+### 🏪 Market_Place/
+The Marketplace section provides curated n8n workflows and application resources for quantitative finance automation. Access to these premium resources is provided exclusively to subscribers through the Substack platform, aligning with a digital minimalism approach that centralizes content distribution without maintaining additional infrastructure.
+
+- **workflows/** - n8n workflow configurations (JSON files)
+- **applications/** - Application builds and resources
+
 ---
 
 ## 📚 Publications & Writing
