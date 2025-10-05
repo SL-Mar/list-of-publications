@@ -1,0 +1,73 @@
+{
+  "type": "automata",
+  "id": "Summarization_Task_Demo",
+  "initial": "home_state",
+  "states": {
+    "home_state": {
+      "render": {
+        "text": "Welcome! What would you like to do?",
+        "buttons": [
+          {
+            "content": "Summarize General PDF",
+            "on_click": "upload_pdf_general_summary_state"
+          }
+        ]
+      },
+      "transitions": {
+        "upload_pdf_general_summary_state": "upload_pdf_general_summary_state"
+      }
+    },
+    "upload_pdf_general_summary_state": {
+      "inputs": {
+        "document": {
+          "description": "Upload a PDF for summarization",
+          "type": "text_file",
+          "user_input": true
+        }
+      },
+      "tasks": [
+        {
+          "name": "extract_text_from_pdf",
+          "module_type": "AnyWidgetModule",
+          "module_config": {
+            "widget_id": "1798203300706521088",
+            "document": "{{document}}",
+            "output_name": "extracted_text"
+          }
+        },
+        {
+          "name": "generate_general_summary",
+          "module_type": "AnyWidgetModule",
+          "module_config": {
+            "widget_id": "1744214024104448199",
+            "user_prompt": {
+              "text": "{{extracted_text}}"
+            },
+            "system_prompt": "You are an expert summarizer. Provide a concise and informative summary of the following text:\n\n{{extracted_text}}",
+            "output_name": "summary"
+          }
+        }
+      ],
+      "outputs": {
+        "summary": "{{summary}}"
+      },
+      "render": {
+        "text": "{{summary}}",
+        "buttons": [
+          {
+            "content": "Summarize Another PDF",
+            "on_click": "upload_pdf_general_summary_state"
+          },
+          {
+            "content": "Return to Home",
+            "on_click": "home_state"
+          }
+        ]
+      },
+      "transitions": {
+        "upload_pdf_general_summary_state": "upload_pdf_general_summary_state",
+        "home_state": "home_state"
+      }
+    }
+  }
+}

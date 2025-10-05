@@ -1,0 +1,52 @@
+{
+  "id": "component_widget_template",
+  "initial": "home_state",
+  "states": {
+    "home_state": {
+      "inputs": {
+        "document": {
+          "description": "A fast version of pdf2text, providing input file support for PDF. Please note that to ensure speed, we do not process any images or text presented as images.",
+          "type": "text_file",
+          "user_input": true
+        }
+      },
+      "render": {
+        "buttons": [
+          {
+            "content": "Generate Again",
+            "on_click": "generate"
+          }
+        ],
+        "text": "{{JSON.stringify(result)}}"
+      },
+      "tasks": [
+        {
+          "module_config": {
+            "document": "{{document}}",
+            "output_name": "result",
+            "widget_id": "1798203300706521088"
+          },
+          "module_type": "AnyWidgetModule",
+          "name": "any_module_example_task"
+        }
+      ],
+      "transitions": {
+        "generate": "home_state"
+      }
+    },
+    "intro_state": {
+      "render": {
+        "buttons": [
+          {
+            "content": "Start",
+            "on_click": "generate"
+          }
+        ],
+        "text": "Welcome to Fast PDF to Text, you can listen voice here."
+      },
+      "transitions": {
+        "generate": "home_state"
+      }
+    }
+  }
+}

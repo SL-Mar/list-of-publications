@@ -1,9 +1,33 @@
-# Codes, Publications and Authored Works
+# Research Notebooks & Code Repository
 
-### This repository contains a collection of Python code snippets and non-structured projects related to quant finance and AI. 
-### Below is a selection of my articles covering **quantitative finance**, **algorithmic trading**, **AI applications**, **Python development**, and maritime law. 
-### You can explore most of these articles on my Medium profile https://medium.com/@sl_mar.
-### Starting September 2025, all finance-related articles will be collected at [quantcoderfs.substack.com](https://quantcoderfs.substack.com/). Please note that some links below may be temporarily broken.
+This repository contains a collection of Python code, Jupyter notebooks, and tools related to **quantitative finance**, **algorithmic trading**, **AI applications**, and **maritime law**.
+
+## 📁 Repository Structure
+
+### 📊 Trading_Strategies/
+- **Breakout_Detection/** - Machine learning models for detecting breakout patterns (LightGBM, trained models)
+- **Algorithms/** - Trading algorithms including RSI, PAA Model, and Range strategies
+
+### 📥 Data_Acquisition/
+- **EODHD/** - Data acquisition tools and notebooks for EODHD financial data
+
+### 🤖 AI_Research/
+- **Biomistral/** - AI research notebooks and experiments
+- **Learning_with_AI/** - Educational AI tools including HR and IT teaching assistants
+
+### 🛠️ Tools/
+- **Quant_Toolbox/** - Quantitative analysis utilities (coder, quantanalyst, HeikenAshi, TextRank, etc.)
+- **MyShell/** - AI bot configurations and prompts (Trading Operator, Fast PDF, YT Summarizer, Market View)
+- **Youtube_Summarizer/** - Tools for summarizing YouTube video transcripts
+
+---
+
+## 📚 Publications & Writing
+
+Below is a selection of my articles covering **quantitative finance**, **algorithmic trading**, **AI applications**, **Python development**, and maritime law.
+
+- **Medium** ([https://medium.com/@sl_mar](https://medium.com/@sl_mar)) - Research articles on AI, finance, and other subjects
+- **Substack** ([quantcoderfs.substack.com](https://quantcoderfs.substack.com/)) - Development log and marketplace access (starting September 2025)
 
 ---
 
