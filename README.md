@@ -164,8 +164,16 @@ et la Croatie**](https://scanr.enseignementsup-recherche.gouv.fr/publications/ha
 
 ---
 
-## **Connect with Me**
-I am a shipmaster writing outside of a traditional academic setting. Explore my [GitHub](https://github.com/SL-Mar) or connect with me for collaboration opportunities.
+## Author
+
+**Sebastien M. Laignel**
+- GitHub: [SL-Mar](https://github.com/SL-Mar)
+- Development Log: [SL-Mar](https://quantcoderfs.substack.com/)
+- Articles: [SL-Mar](https://medium.com/@sl_mar)
+- LinkedIn: [SL-Mar](https://www.linkedin.com/in/smr-laignel/)
+- Email: smr.laignel@gmail.com
+
+I am a shipmaster writing outside of a traditional academic setting.
 
 ---
 
