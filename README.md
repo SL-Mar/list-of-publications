@@ -1,6 +1,7 @@
 # Research Tools & Helper Projects
 
-A collection of research tools, utilities, and helper projects supporting quantitative finance and AI development.
+A curated collection of research tools, utilities, and support projects designed for quantitative finance and AI development. This repository may 
+occasionally differ from local versions depending on the current development stage and licensing restrictions.
 
 ## 📁 Repository Structure
 
